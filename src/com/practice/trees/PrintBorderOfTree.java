@@ -28,7 +28,7 @@ public class PrintBorderOfTree {
 		while(root != null){
 			nodes.push(root);
 			if(root.left != null || root.right != null)
-				System.out.println(root.data);
+				System.out.println("left node "+root.data);
 			root = root.left;
 			
 		}
@@ -37,7 +37,7 @@ public class PrintBorderOfTree {
 			Node n = nodes.pop();
 			if( n != null){
 			if(n.left == null && n.right == null)
-				System.out.println(n.data);
+				System.out.println("leaf node "+n.data);
 			if(n.right != null){
 				n = n.right;
 				nodes.push(n);
@@ -60,7 +60,7 @@ public class PrintBorderOfTree {
 		while(!n.isEmpty()){
 			Node node = n.pop();
 			if(node != null && (node.left != null || node.right != null))
-				System.out.println(node.data);
+				System.out.println("right node "+node.data);
 		}
 	}
 
